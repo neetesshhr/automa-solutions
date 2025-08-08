@@ -1,6 +1,6 @@
 import React from "react";
-import heroImage from "@/assets/hero-automation.jpg";
 import { Button } from "@/components/ui/button";
+import EffectZeroScene from "@/components/three/EffectZeroScene";
 
 const Hero: React.FC = () => {
   const sectionRef = React.useRef<HTMLDivElement | null>(null);
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
     <section
       onMouseMove={handleMouseMove}
       ref={sectionRef}
-      className="relative overflow-hidden py-16 md:py-24"
+      className="relative overflow-hidden py-16 md:py-24 animate-enter"
       aria-labelledby="hero-title"
     >
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "var(--gradient-surface)" }} />
@@ -35,13 +35,8 @@ const Hero: React.FC = () => {
             <a href="#platforms"><Button variant="outline" size="lg">See how it works</Button></a>
           </div>
         </div>
-        <div className="relative">
-          <img
-            src={heroImage}
-            alt="Abstract workflow automation connecting finance, accounting, and operations"
-            loading="lazy"
-            className="rounded-lg shadow-glow w-full h-auto"
-          />
+        <div className="relative animate-fade-in">
+          <EffectZeroScene />
         </div>
       </div>
     </section>

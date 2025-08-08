@@ -32,7 +32,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-16 md:py-24">
+    <section id="features" className="py-16 md:py-24 animate-fade-in">
       <div className="container mx-auto">
         <h2 className="text-3xl font-semibold mb-6">Built for service companies</h2>
         <p className="text-muted-foreground max-w-2xl mb-10">
@@ -40,7 +40,7 @@ const Features = () => {
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           {features.map(({ title, icon: Icon, points }) => (
-            <article key={title} className="rounded-lg border p-6 bg-card shadow-elevated">
+            <article key={title} className="rounded-lg border p-6 bg-card shadow-elevated hover-scale">
               <div className="flex items-center gap-3 mb-4">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-secondary">
                   <Icon className="text-primary" />

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 
+
 const tiers = [
   {
     name: "Starter",
@@ -25,7 +26,7 @@ const tiers = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-16 md:py-24">
+    <section id="pricing" className="py-16 md:py-24 animate-fade-in">
       <div className="container mx-auto">
         <h2 className="text-3xl font-semibold mb-6">Simple monthly retainers</h2>
         <p className="text-muted-foreground max-w-2xl mb-10">
