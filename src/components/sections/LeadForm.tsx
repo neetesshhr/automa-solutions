@@ -57,7 +57,7 @@ const LeadForm: React.FC = () => {
         <div>
           <h2 className="text-3xl font-semibold mb-4">Request a demo</h2>
           <p className="text-muted-foreground">
-            Tell us about your processes. We'll propose a roadmap and show you a live n8n workflow tailored to your needs.
+            Tell us about your processes. We will propose a roadmap and show you a live workflow tailored to your needs.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="rounded-lg border p-6 bg-card shadow-elevated grid gap-4">

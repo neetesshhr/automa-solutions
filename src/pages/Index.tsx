@@ -12,21 +12,21 @@ const Index = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "FlowPilot Automations",
+    name: "effectzero",
     description:
-      "n8n automation services for finance, accounting, and operations teams.",
+      "Automation services for finance, accounting, and operations teams.",
     url: canonical,
     areaServed: "Global",
-    sameAs: ["https://n8n.io"],
+    sameAs: [],
   };
 
   return (
     <div>
       <Helmet>
-        <title>Automation Services for Finance & Ops | n8n Experts</title>
+        <title>Automation Services for Finance & Ops | effectzero</title>
         <meta
           name="description"
-          content="We design, build, and manage n8n automations for finance, accounting, and operations teams. Faster, error-free processes with real ROI."
+          content="We design, build, and manage automations for finance, accounting, and operations teams. Faster, error-free processes with real ROI."
         />
         <link rel="canonical" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

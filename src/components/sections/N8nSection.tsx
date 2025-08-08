@@ -1,11 +1,11 @@
 const N8nSection = () => {
   return (
-    <section id="n8n" className="py-16 md:py-24">
+    <section id="platforms" className="py-16 md:py-24">
       <div className="container mx-auto grid md:grid-cols-2 gap-10 items-start">
         <div>
-          <h2 className="text-3xl font-semibold mb-4">Why n8n for automations</h2>
+          <h2 className="text-3xl font-semibold mb-4">Platforms we implement</h2>
           <p className="text-muted-foreground mb-6">
-            n8n is a powerful, open-source automation platform with 400+ integrations. We design resilient workflows, manage deployments, and monitor runs so your team can focus on outcomes.
+            We design and manage reliable workflows using best-in-class automation platforms (open-source and commercial). From integration to observability, we run it for you.
           </p>
           <ul className="space-y-3 text-sm">
             <li>• Flexible: self-hosted or cloud, data-friendly</li>

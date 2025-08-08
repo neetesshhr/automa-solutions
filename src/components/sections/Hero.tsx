@@ -23,16 +23,16 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: "var(--gradient-surface)" }} />
       <div className="container mx-auto grid md:grid-cols-2 items-center gap-10 relative">
         <div>
-          <p className="mb-3 text-sm text-muted-foreground">n8n Experts • Managed Automations</p>
+          <p className="mb-3 text-sm text-muted-foreground">Automation Experts • Managed Workflows</p>
           <h1 id="hero-title" className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
             Automation services for finance, accounting, and operations
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            We design, build, and run scalable n8n workflows that cut manual work, reduce errors, and accelerate your back-office.
+            We design, build, and run scalable automations across your stack that cut manual work, reduce errors, and accelerate your back-office.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a href="#contact"><Button variant="hero" size="xl">Get a demo</Button></a>
-            <a href="#n8n"><Button variant="outline" size="lg">See how it works</Button></a>
+            <a href="#platforms"><Button variant="outline" size="lg">See how it works</Button></a>
           </div>
         </div>
         <div className="relative">
