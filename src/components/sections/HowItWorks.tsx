@@ -20,7 +20,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how" className="py-16 md:py-24 animate-fade-in">
+    <section id="how" className="py-16 md:py-24 animate-enter">
       <div className="container mx-auto">
         <h2 className="text-3xl font-semibold mb-6">How we work</h2>
         <p className="text-muted-foreground max-w-2xl mb-10">

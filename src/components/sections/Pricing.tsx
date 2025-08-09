@@ -26,7 +26,7 @@ const tiers = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-16 md:py-24 animate-fade-in">
+    <section id="pricing" className="py-16 md:py-24 animate-enter">
       <div className="container mx-auto">
         <h2 className="text-3xl font-semibold mb-6">Simple monthly retainers</h2>
         <p className="text-muted-foreground max-w-2xl mb-10">
@@ -34,7 +34,7 @@ const Pricing = () => {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           {tiers.map((t) => (
-            <article key={t.name} className="rounded-lg border p-6 bg-card shadow-elevated">
+            <article key={t.name} className="rounded-lg border p-6 bg-card shadow-elevated hover-scale">
               <div className="flex items-baseline justify-between mb-4">
                 <h3 className="text-xl font-medium">{t.name}</h3>
                 <div className="text-2xl font-semibold">{t.price}</div>

@@ -1,6 +1,6 @@
 const N8nSection = () => {
   return (
-    <section id="platforms" className="py-16 md:py-24 animate-fade-in">
+    <section id="platforms" className="py-16 md:py-24 animate-enter">
       <div className="container mx-auto grid md:grid-cols-2 gap-10 items-start">
         <div>
           <h2 className="text-3xl font-semibold mb-4">Platforms we implement</h2>

@@ -4,7 +4,7 @@ import Logo from "@/components/Logo";
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:glass-panel">
+    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:glass-panel animate-fade-in">
       <nav className="container mx-auto flex items-center justify-between py-3">
         <Link to="/" className="inline-flex items-center gap-2">
           <Logo />

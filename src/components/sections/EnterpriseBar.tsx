@@ -7,7 +7,7 @@ const EnterpriseBar = () => {
     "Observability",
   ];
   return (
-    <section className="py-6 animate-fade-in">
+    <section className="py-6 animate-enter">
       <div className="container mx-auto flex flex-wrap items-center gap-3 justify-center">
         <span className="text-sm text-muted-foreground">Trusted by startups & enterprises</span>
         <div className="flex flex-wrap gap-2">
