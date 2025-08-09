@@ -16,7 +16,7 @@ const Index = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "effectzero",
+    name: "EffortZero",
     description:
       "Automation services for finance, accounting, and operations teams.",
     url: canonical,
@@ -27,7 +27,7 @@ const Index = () => {
   return (
     <div>
       <Helmet>
-        <title>Automation Services for Finance & Ops | effectzero</title>
+        <title>Automation Services for Finance & Ops | EffortZero</title>
         <meta
           name="description"
           content="We design, build, and manage automations for finance, accounting, and operations teams. Faster, error-free processes with real ROI."
