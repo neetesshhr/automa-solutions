@@ -12,7 +12,7 @@ const LeadForm: React.FC = () => {
 
   // EmailJS configuration - Replace these with your actual EmailJS credentials
   const EMAILJS_SERVICE_ID = "service_88uztx9"; // Replace with your EmailJS service ID
-  const EMAILJS_TEMPLATE_ID = "template_k78o4vy"; // Replace with your EmailJS template ID
+  const EMAILJS_TEMPLATE_ID = "template_rogg34a"; // Replace with your EmailJS template ID
   const EMAILJS_PUBLIC_KEY = "iKgRfjcDVkVt4q69b"; // Replace with your EmailJS public key
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
