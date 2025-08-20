@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
-COPY bun.lockb ./
+# COPY bun.lockb ./
 
 # Install dependencies (including dev dependencies for build)
 RUN npm ci
