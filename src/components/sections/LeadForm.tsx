@@ -4,46 +4,44 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const LeadForm: React.FC = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = React.useState(false);
-  const [webhookUrl, setWebhookUrl] = React.useState("");
+
+  // EmailJS configuration - Replace these with your actual EmailJS credentials
+  const EMAILJS_SERVICE_ID = "your_service_id"; // Replace with your EmailJS service ID
+  const EMAILJS_TEMPLATE_ID = "your_template_id"; // Replace with your EmailJS template ID
+  const EMAILJS_PUBLIC_KEY = "your_public_key"; // Replace with your EmailJS public key
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(form.entries());
-
+    const form = e.currentTarget;
     setIsLoading(true);
 
     try {
-      if (webhookUrl) {
-        await fetch(webhookUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          mode: "no-cors",
-          body: JSON.stringify({
-            ...payload,
-            timestamp: new Date().toISOString(),
-            triggered_from: window.location.origin,
-          }),
-        });
-        toast({
-          title: "Request sent",
-          description: "Check your Zap's history to confirm it was triggered.",
-        });
-      } else {
-        console.log("Lead submitted", payload);
-        toast({ title: "Thanks!", description: "We'll be in touch shortly." });
-      }
+      // Send email using EmailJS
+      const result = await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully:', result);
+      toast({
+        title: "Request sent successfully!",
+        description: "We'll be in touch with you shortly.",
+      });
+      
+      // Reset form
+      form.reset();
     } catch (error) {
-      console.error("Error triggering webhook:", error);
+      console.error('Error sending email:', error);
       toast({
         title: "Error",
-        description: "Failed to submit. Please try again.",
+        description: "Failed to send request. Please try again or contact us directly at contacteffortzero@gmail.com",
         variant: "destructive",
       });
     } finally {
@@ -76,11 +74,6 @@ const LeadForm: React.FC = () => {
           <div className="grid gap-2">
             <Label htmlFor="usecase">What should we automate?</Label>
             <Textarea id="usecase" name="usecase" placeholder="e.g., AP invoice approvals, bank reconciliations, user onboarding" />
-          </div>
-          <div className="grid gap-2">
-            <Label htmlFor="webhook">Zapier webhook (optional)</Label>
-            <Input id="webhook" name="webhook" placeholder="https://hooks.zapier.com/..." value={webhookUrl} onChange={(e) => setWebhookUrl(e.target.value)} />
-            <p className="text-xs text-muted-foreground">Add a Zapier webhook to receive this form instantly in your tools.</p>
           </div>
           <Button type="submit" variant="hero" disabled={isLoading}>
             {isLoading ? "Sending..." : "Send request"}
