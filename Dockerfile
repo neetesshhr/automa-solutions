@@ -1,6 +1,7 @@
 # Multi-stage build for React/Vite application
 # Stage 1: Build the application
-FROM node:22-alpine AS builder
+FROM node:20-alpine AS builder
+
 
 WORKDIR /app
 
@@ -33,7 +34,7 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 # Stage 3: Development image
-FROM node:18-alpine AS development
+FROM node:20-alpine AS development
 
 WORKDIR /app
 
