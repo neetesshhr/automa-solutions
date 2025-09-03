@@ -5,6 +5,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center gap-4">
           <p>© {new Date().getFullYear()} EffortZero</p>
           <a href="/privacy-policy" className="hover:text-primary">Privacy Policy</a>
+          <a href="/terms-of-service" className="hover:text-primary">Terms of Service</a>
         </div>
         <nav className="flex items-center gap-4 flex-wrap justify-center">
           <a href="#features" className="hover:text-primary">Features</a>
